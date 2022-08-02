@@ -44,12 +44,7 @@ function Contacts() {
   return (
     <div>
       {contacts.map(contact => (
-        <Contact
-          key={contact.id}
-          name={contact.name}
-          email={contact.email}
-          phone={contact.phone}
-        />
+        <Contact key={contact.id} contact={contact} />
       ))}
     </div>
   );
