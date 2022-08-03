@@ -41,13 +41,13 @@ function Contacts() {
     setContacts(INITIAL_STATE);
   }, []);
 
-  return (
-    <div>
-      {contacts.map(contact => (
-        <Contact key={contact.id} contact={contact} />
-      ))}
-    </div>
-  );
+  const renderContacts = (): JSX.Element[] => {
+    return contacts.map(contact => (
+      <Contact key={contact.id} contact={contact} />
+    ));
+  };
+
+  return <div>{renderContacts()}</div>;
 }
 
 export default Contacts;
